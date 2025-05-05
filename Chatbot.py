@@ -8,7 +8,7 @@ import google.generativeai as genai
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 ## function to load Gemini Pro model and get repsonses
-model=genai.GenerativeModel("gemini-pro") 
+model=genai.GenerativeModel("gemini-1.5-pro-latest") 
 chat = model.start_chat(history=[])
 def get_gemini_response(question):
     
@@ -19,7 +19,7 @@ def get_gemini_response(question):
 
 st.set_page_config(page_title="Q&A Demo")
 
-st.header("Gemini LLM Application")
+st.header("Chimtu BOT (by : BOT sai ramesh Vajjala)")
 
 # Initialize session state for chat history if it doesn't exist
 if 'chat_history' not in st.session_state:
